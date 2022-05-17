@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+
+    <title>Tela de login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+  </style>
+  <!---------------------------------------------------------------------------------------------------------------------->
+
+  <body>
+      <style>
+          body {
+              background-color: black;
+          }
+          form {
+              background-color: red;
+              max-width: 500px;
+              width: 70%;
+              padding: 20px;
+              position: absolute;
+              left:50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 20px;
+          }
+          form h3{
+              text-align: center;
+              color: aqua;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          }
+
+          form input[type=text],
+          form input[type=password] {
+              width: 100%;
+              height: 45px;
+              border: 1px solid #fcf7a5;
+              padding-left: 10px;
+              margin: 10px 0;
+              border-radius: 20px;
+          }
+          form input[type=submit] {
+              width: 100%;
+              height: 30px;
+              cursor: pointer;
+              background: gray;
+              color: white;
+              border: 0;
+              border-radius: 20px;
+              transition: 1s;
+          }
+          form input[type=submit]:hover{
+              background-color: black;
+          }
+      </style>
+    <div
+
+    >
+      <!--Background-->
+
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #000000b2"
+      >
+        <!--Barra de navegação-->
+
+        <div class="container-fluid grenze">
+          <div class="d-flex justify-content-start">
+            <a class="nav-link" style="margin-top: 2%" href="#">
+              <img
+                src="/src/app/imagens/kisspng-pixel-art-scroll-clip-art-scroll-bar-5aeafcded3d6a3.3339838415253495988677.png"
+                width="60px"
+                height="60px"
+              />
+              <span style="color:#fcf7a5;" class="h2">Gaming Scroll</span>
+            </a>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <ul class="navbar-nav h3">
+              <li class="nav-item active">
+                <a class="nav-link me-lg-3 text-cor" href="#">
+                  <span class="sr-only text-cor">Home</span></a
+                >
+              </li>
+              <li class="nav-item me-lg-3">
+                <a class="nav-link" href="#"
+                  ><span class="text-cor"> Link</span></a
+                >
+              </li>
+              <li class="nav-item me-lg-3">
+                <a class="nav-link" href="#"
+                  ><span class="text-cor"> Site</span></a
+                >
+              </li>
+              <li class="nav-item me-lg-3">
+                <a class="nav-link" href="#"
+                  ><span class="text-cor"> Seila</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--Navegação central-->
+          <div>
+            <a class="navbar-brand" style="margin-left: 25vh" href="#"
+              ><span class="text-cor2 h3"> Login</span></a
+            >
+      </nav>
+    </div>
+    <form>
+        <h3>Faça o login</h3>
+        <input type="text" name="email" placeholder="Seu e-mail..." />
+        <input type="password" name="senha" placeholder="Sua senha..." />
+        <input type="submit" name="acao" placeholder="Enviar" (click)="fazer login()" />
+    </form>
+    <script>
+
+    </script>
+  </body>
+</html>
