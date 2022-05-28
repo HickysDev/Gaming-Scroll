@@ -1,0 +1,57 @@
+.quadrado {
+    background-color: #000000b2;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    overflow: auto;
+}
+
+h3 {
+    text-align: center;
+    color:#fcf7a5;
+    font-family:  "Grenze Gotisch", cursive;
+    margin-bottom: 30px ;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+h1 {
+    color: rgb(255, 253, 209);
+    font-size: 30px;
+    text-align: justify;
+    margin: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    color:rgb(255, 253, 209);
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 40px;
+    margin-top: 7%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(101, 101, 101);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

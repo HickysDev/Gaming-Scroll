@@ -6,6 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { routes } from './app.routing';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { NavBarCliComponent } from './nav-bar-cli/nav-bar-cli.component';
+import { FooterComponent } from './footer/footer.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { RegistrarComponent } from './registrar/registrar.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    NavBarCliComponent,
+    FooterComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,

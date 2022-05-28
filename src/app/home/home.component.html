@@ -25,47 +25,8 @@
       ">
         <!--Background-->
 
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000b2">
-            <!--Barra de navegação-->
-
-            <div class="container-fluid grenze">
-                <div class="justify-content-start">
-                    <a class="nav-link" href="#">
-                        <img src="../assets/img/kisspng-pixel-art-scroll-clip-art-scroll-bar-5aeafcded3d6a3.3339838415253495988677.png"
-                            width="55px" height="50px" />
-                        <span class="text-cor pt-6">Gaming Scroll</span>
-                    </a>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                    <ul class="navbar-nav h3">
-                        <li class="nav-item active">
-                            <a class="nav-link me-lg-3 text-cor" routerLink="">
-                                <span class="sr-only text-cor"></span></a>
-                        </li>
-                        <li class="nav-item me-lg-3">
-                            <a class="nav-link" routerLink=""><span class="text-cor">Sobre</span></a>
-                        </li>
-                        <li class="nav-item me-lg-3">
-                            <a class="nav-link" routerLink="/registrar"><span class="text-cor"> Suporte</span></a>
-                        </li>
-                        <li class="nav-item me-lg-3">
-                            <a class="nav-link" routerLink=""><span class="text-cor"> <img
-                                        src="../../assets/img/238-2385461_magnifying-glass-pixel-art-from-the-science-pack-of-minecraft-cake-pixel.png"
-                                        style="width: 30px;"></span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="navbar-brand justify-content-end" style="margin-left: 15vh" routerLink="/login"><span
-                            class="text-cor2 h3">
-                            Entrar
-                        </span></a>
-                </div>
-                <!--Login do site-->
-            </div>
-        </nav>
-
+   <app-nav-bar-cli></app-nav-bar-cli>
+        
         <!--Centro da Página-->
 
         <main>
@@ -78,12 +39,7 @@
                 </div>
             </div>
         </main>
-        <footer class="text-center text-white fixed-bottom" style="background-color: #000000b2;">
-            <div class="text-center p-3">
-                © 2022 Copyright:
-                <a class="text-white" href="index.html">Gaming Scroll</a>
-            </div>
-        </footer>
+        <app-footer></app-footer>
     </div>
 </body>
 
