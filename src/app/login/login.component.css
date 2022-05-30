@@ -12,34 +12,39 @@ form {
 
 form h3 {
     text-align: center;
-    color:#fcf7a5;
-    font-family:  "Grenze Gotisch", cursive;
-    margin-bottom: 30px ;
-    font-size: 50px;
+    color: #fcf7a5;
+    font-family: "Grenze Gotisch", cursive;
+    margin-bottom: 30px;
+    font-size: 55px;
 }
 
 form input[type=text],
 form input[type=password] {
     width: 100%;
     height: 70px;
-    border:1px solid  #646166;
     padding-left: 10px;
-    margin:15px 0;
-    border-radius: 20px;
-    
+    margin: 15px 0;
+    border-radius: 50px;
+    outline: none;
 }
 
+
 form input[type=submit] {
+    border: 1px solid #fcf7a5;
     width: 100%;
     height: 60px;
     cursor: pointer;
-    background: #fcf7a5;
+    background: rgba(2, 1, 0, 0.4);
     margin: 15px 0;
-    font-family:  "Grenze Gotisch", cursive;
+    font-family: "Grenze Gotisch", cursive;
     font-size: 30px;
-    border-radius: 20px;
+    border-radius: 50px;
+    color: #fcf7a5;
+    outline: none;
+    font-size: 30px;
 }
 
-form input[type=submit]:hover{
-    background-color: #b09729;
+form input[type=submit]:hover {
+    color: rgb(175, 150, 40);
+    border: 1px solid rgb(175, 150, 40);
 }
