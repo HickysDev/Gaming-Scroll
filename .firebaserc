@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gaming-scroll": {
+      "hosting": {
+        "ProjetoA3": [
+          "gaming-scroll"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gaming-scroll"
+  }
+}

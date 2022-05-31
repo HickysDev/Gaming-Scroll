@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ProjetoA3:build:production",
+            "firebaseProject": "gaming-scroll",
+            "firebaseHostingSite": "gaming-scroll"
+          }
         }
       }
     }

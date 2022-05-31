@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    projectId: 'gaming-scroll',
+    appId: '1:745762534007:web:f3df254ee8e6be5f6b4c72',
+    storageBucket: 'gaming-scroll.appspot.com',
+    apiKey: 'AIzaSyAF1I8kTnFJSnbGhpHnN0397rM-u2pwygw',
+    authDomain: 'gaming-scroll.firebaseapp.com',
+    messagingSenderId: '745762534007',
+  }
 };
 
 /*
