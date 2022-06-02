@@ -10,32 +10,14 @@
   border-radius: 50px;
 }
 
-.login-texto {
+.login-teste {
   text-align: center;
   color: #fcf7a5;
-  font-family: "Grenze Gotisch", cursive;
   margin-bottom: 30px;
-  font-size: 55px;
+  font-size: 30px;
 }
 
-.placeholders {
-  background-color: rgba(0, 0, 0, 0.473);
-  width: 100%;
-  height: 55px;
-  padding-left: 10px;
-  margin: 15px 0;
-  border-radius: 50px;
-  outline: none;
-  text-align: center;
-  font-size: 18px;
-  color: #fcf7a5;
-}
-
-::-webkit-input-placeholder {
-  color: #fcf7a5;
-}
-
-.botao-entrar {
+.botao-sair {
   border: 1px solid #fcf7a5;
   width: 100%;
   height: 60px;
@@ -50,7 +32,7 @@
   font-size: 30px;
 }
 
-.botao-entrar:hover {
+.botao-sair:hover {
   color: rgb(175, 150, 40);
   border: 1px solid rgb(175, 150, 40);
 }

@@ -1,42 +1,41 @@
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
 </style>
-<!-------------------------------------------------------------------------->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
 
 <body>
-    <div class="bg-inteiro" style="
-        background-image: url(../assets/img/akfqd7mvcss51.jpg);
-        background-repeat: no-repeat;
-      ">
-        <app-nav-bar-cli></app-nav-bar-cli>
-    <form>
-        <h3>Login</h3>
-        <input type="text" name="email" placeholder="Seu e-mail"/>
-        <input type="password" name="senha" placeholder="Sua senha"/>
-        <input type="submit" name="acao" value="Entrar"/> <!-- Não to conseguindo mudar pra Entrar, continua como Enviar-->
-
-    </form>
-
-
+  <div
+    class="bg-inteiro"
+    style="
+      background-image: url(../assets/img/akfqd7mvcss51.jpg);
+      background-repeat: no-repeat;
+    "
+  >
+    <app-nav-bar-cli></app-nav-bar-cli>
+    <div *ngIf="!isSignedIn">
+      <div class="caixa">
+        <h3 class="login-texto">Login</h3>
+        <input
+          class="placeholders"
+          type="text"
+          #emailSignin
+          placeholder="E-mail"
+        />
+        <input
+          class="placeholders"
+          type="text"
+          #passwordSignin
+          placeholder="Senha"
+        />
+        <button
+          class="botao-entrar"
+          (click)="onSignin(emailSignin.value, passwordSignin.value)"
+        >
+          Entrar
+        </button>
+      </div>
+      <!-- componente pra testar login, tem um botão de logout nele -->
     </div>
+    <app-teste *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-teste>
+    <app-footer></app-footer>
+  </div>
 </body>
-<app-footer></app-footer>
-
-</html>
-
-
-
-
-
-<!-------------------------------------------------------------------------->

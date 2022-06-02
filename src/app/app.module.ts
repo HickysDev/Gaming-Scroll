@@ -9,11 +9,12 @@ import { RegistrarComponent } from './registrar/registrar.component';
 import { NavBarCliComponent } from './nav-bar-cli/nav-bar-cli.component';
 import { FooterComponent } from './footer/footer.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { AngularFireModule} from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database'; 
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { FirebaseService } from './services/firebase.service';
+import { TesteComponent } from './teste/teste.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +24,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     RegistrarComponent,
     NavBarCliComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    TesteComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+  providers: [FirebaseService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
