@@ -3,33 +3,18 @@
 </style>
 
 <body>
-  <div
-    class="bg-inteiro"
-    style="
+  <div class="bg-inteiro" style="
       background-image: url(../assets/img/akfqd7mvcss51.jpg);
       background-repeat: no-repeat;
-    "
-  >
+    ">
     <app-nav-bar-cli></app-nav-bar-cli>
+
     <div *ngIf="!isSignedIn">
-      <div class="caixa">
+      <div class="caixa borderToda">
         <h3 class="login-texto">Login</h3>
-        <input
-          class="placeholders"
-          type="text"
-          #emailSignin
-          placeholder="E-mail"
-        />
-        <input
-          class="placeholders"
-          type="text"
-          #passwordSignin
-          placeholder="Senha"
-        />
-        <button
-          class="botao-entrar"
-          (click)="onSignin(emailSignin.value, passwordSignin.value)"
-        >
+        <input class="placeholders" type="text" #emailSignin placeholder="E-mail" />
+        <input class="placeholders" type="text" #passwordSignin placeholder="Senha" />
+        <button class="botao-entrar" (click)="onSignin(emailSignin.value, passwordSignin.value)">
           Entrar
         </button>
       </div>

@@ -1,78 +1,77 @@
-.botaoHome {
-    max-width: 300px;
-    width: 300px;
-    height: auto;
-
-    position: absolute;
-    left: 50%;
-    top: 52%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
-
-    background-color: #0000001b;
-    border: 2px solid #8B3C04;
-    color: #FEF7A2;
-
-
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #8B3C04;
-
+a {
+  text-decoration: none;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #8B3C04;
+  color: #fef7a2;
+  font-size: 50px;
 }
+
+a:hover,
+a:link,
+a:visited,
+a:focus {
+  color: #fef7a2;
+}
+
+.botaoHome {
+  max-width: 300px;
+  width: 300px;
+  height: auto;
+
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+
+  background-color: #00000000;
+  border: 2px solid #8b3c04;
+  color: #fef7a2;
+
+  text-align: center;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #8B3C04;
+}
+
 
 .botaoHome:hover {
-    color: #8B3C04;
-    border: 2px solid #FEF7A2;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FEF7A2;
-
-    transition: 850ms;
+  background-color: #8b3c0478;
+  border: 2px solid #fef7a2;
+  transition: 1s;
 }
 
-.botaoHome::before {
-    border-radius: 50%;
-    transition: transform 1s ease;
-    transform: scale(0);
-    z-index: -1;
-}
 
-.botaoHome::after {
-    border-radius: 50%;
-    transition: transform 1s ease;
-    transform: scale(0);
-    z-index: -1;
-}
 
 
 .form {
-    background-color: #000000b2;
-    max-width: 600px;
-    width: 425px;
-    max-height: 550px;
-    height: 550px;
-    padding: 50px;
-    position: absolute;
-    left: 50%;
-    top: 47.5%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
+  background-color: #000000b2;
+  max-width: 600px;
+  width: 425px;
+  max-height: 550px;
+  height: 550px;
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  top: 47.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  border: solid black 2px;
 }
 
 .logoCentral {
-    position: absolute;
-    left: 50%;
-    top: 32%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
 }
 
 .botaoCentral {
-    position: absolute;
-    left: 50%;
-    top: 72%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
-
+  position: absolute;
+  left: 50%;
+  top: 72%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
 }

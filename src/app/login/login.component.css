@@ -19,6 +19,7 @@
 }
 
 .placeholders {
+  border: black solid 1px;
   background-color: rgba(0, 0, 0, 0.473);
   width: 100%;
   height: 55px;
@@ -28,11 +29,11 @@
   outline: none;
   text-align: center;
   font-size: 18px;
-  color: #fcf7a5;
+  color: #fcf8a5;
 }
 
 ::-webkit-input-placeholder {
-  color: #fcf7a5;
+  color: #fcf8a58d;
 }
 
 .botao-entrar {

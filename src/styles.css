@@ -114,3 +114,15 @@ a .text-cor2:hover {
     margin: 0 auto;
     border: black 1px solid;
 }
+
+.borderBaixo {
+    border-bottom: solid black 3px;
+}
+
+.borderToda {
+    border: solid black 3px;
+}
+
+.borderTopo {
+    border-bottom: solid black 3px;
+}

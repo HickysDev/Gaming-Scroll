@@ -15,6 +15,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { FirebaseService } from './services/firebase.service';
 import { TesteComponent } from './teste/teste.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TesteComponent } from './teste/teste.component';
     FooterComponent,
     SobreComponent,
     TesteComponent,
+    SuporteComponent,
   ],
   imports: [
     BrowserModule,
