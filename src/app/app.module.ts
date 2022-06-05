@@ -16,6 +16,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { FirebaseService } from './services/firebase.service';
 import { TesteComponent } from './teste/teste.component';
 import { SuporteComponent } from './suporte/suporte.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AuthService } from "./shared/services/auth.service";
 
 @NgModule({
   declarations: [
@@ -28,14 +34,20 @@ import { SuporteComponent } from './suporte/suporte.component';
     SobreComponent,
     TesteComponent,
     SuporteComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [FirebaseService],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

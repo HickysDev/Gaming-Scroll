@@ -1,0 +1,26 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+    <div class="bg-inteiro" style="
+        background-image: url(../assets/img/akfqd7mvcss51.jpg);
+        background-repeat: no-repeat;
+      ">
+        <app-nav-bar-cli></app-nav-bar-cli>
+        <div>
+            <div class="caixa borderToda" action='#'>
+                <h3 class="login-texto">Registre-se</h3>
+
+                <input class="placeholders" type="email" placeholder="E-mail" #userEmail required/>
+                <input class="placeholders" type="password" placeholder="Senha" #userPwd required/>
+                <button class="botao-entrar" type='reset' (click)="authService.SignUp(userEmail.value, userPwd.value)">
+                    Registrar
+                </button>
+            </div>
+            <!-- componente pra testar login, tem um botão de logout nele -->
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+</body>
