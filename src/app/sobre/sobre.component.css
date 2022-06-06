@@ -6,6 +6,8 @@
   transform: translate(-50%, -50%);
   border-radius: 50px;
   border: solid black 2px;
+  max-width: 700px;
+  height: 450px;
 }
 
 h3 {
@@ -14,15 +16,15 @@ h3 {
   font-family: "Grenze Gotisch", cursive;
   margin-bottom: 30px;
   margin-top: 20px;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 h1 {
   color: #fcf7a5;
-  font-size: 2vw;
+  font-size: 20px;
   text-align: justify;
   margin: 40px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 h2 {
@@ -32,7 +34,7 @@ h2 {
   margin: 40px;
   margin-bottom: 10px;
   margin-top: 7%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* width */
