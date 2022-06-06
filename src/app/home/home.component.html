@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles.css" />
 
     <title>Tela de login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<style>
+  <style>
     @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
-    @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap');
-</style>
-<!---------------------------------------------------------------------------------------------------------------------->
+    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap");
+  </style>
+  <!---------------------------------------------------------------------------------------------------------------------->
 
-<body>
-    <div class="bg-inteiro" style="
+  <body>
+    <div
+      class="bg-inteiro"
+      style="
         background-image: url(../assets/img/akfqd7mvcss51.jpg);
         background-repeat: no-repeat;
-      ">
-        <!--Background-->
+      "
+    >
+      <!--Background-->
 
-        <app-nav-bar-cli></app-nav-bar-cli>
+      <app-nav-bar-cli></app-nav-bar-cli>
 
-        <!--Centro da Página-->
+      <!--Centro da Página-->
 
-        <main>
-            <div class="logo-nome  form">
-                <div class="flex ">
-                    <img class="pergaminho logoCentral" src="../../assets/img/pergaminho3.png" />
-                </div>
-                <div>
-                    <button class="botaoHome botaoCentral grenze" routerLink="/registrar">Registre-se</button>
-                </div>
-            </div>
-        </main>
-        <app-footer></app-footer>
+      <main>
+        <div class="logo-nome form">
+          <div class="flex">
+            <img
+              class="pergaminho logoCentral"
+              src="../../assets/img/pergaminho3.png"
+            />
+          </div>
+          <div>
+            <button class="botaoHome botaoCentral">
+              <p class="grenze textoBotaoHome">Registrar-se</p>
+            </button>
+          </div>
+        </div>
+      </main>
+      <app-footer></app-footer>
     </div>
-</body>
-
+  </body>
 </html>

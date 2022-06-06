@@ -2,9 +2,19 @@ a {
   text-decoration: none;
   text-align: center;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #8B3C04;
+  -webkit-text-stroke-color: #8b3c04;
   color: #fef7a2;
   font-size: 50px;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.grenze {
+  font-family: "Grenze Gotisch", cursive;
+}
+
+.grenze2 {
+  font-family: "Grenze Gotisch", cursive;
 }
 
 a:hover,
@@ -30,20 +40,34 @@ a:focus {
   color: #fef7a2;
 
   text-align: center;
-  font-size: 50px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #8B3C04;
 }
-
 
 .botaoHome:hover {
-  background-color: #8b3c0478;
+  background-color: #8b3c04b0;
   border: 2px solid #fef7a2;
-  transition: 1s;
+  transition: 300ms;
 }
 
+.botaoHome::before {
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
 
+.botaoHome::after {
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
 
+.textoBotaoHome {
+  position: relative;
+  top: 5px;
+  font-size: 50px;
+  font-weight: 500;
+}
 
 .form {
   background-color: #000000b2;
@@ -57,7 +81,6 @@ a:focus {
   top: 47.5%;
   transform: translate(-50%, -50%);
   border-radius: 50px;
-  border: solid black 2px;
 }
 
 .logoCentral {
@@ -74,4 +97,15 @@ a:focus {
   top: 72%;
   transform: translate(-50%, -50%);
   border-radius: 50px;
+}
+
+.logo-nome {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  width: 800px;
+  height: 500px;
+}
+
+.pergaminho {
+  width: 350px;
 }
