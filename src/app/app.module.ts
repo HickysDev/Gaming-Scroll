@@ -12,7 +12,6 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { FirebaseService } from './services/firebase.service';
-import { TesteComponent } from './teste/teste.component';
 import { SuporteComponent } from './suporte/suporte.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -28,7 +27,6 @@ import { AuthService } from './shared/services/auth.service';
     NavBarCliComponent,
     FooterComponent,
     SobreComponent,
-    TesteComponent,
     SuporteComponent,
     SignInComponent,
     SignUpComponent,
