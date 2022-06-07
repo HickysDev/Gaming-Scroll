@@ -1,4 +1,4 @@
-form {
+.caixa {
     background-color: #000000b2;
     max-width: 400px;
     width: 70%;
@@ -8,28 +8,35 @@ form {
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50px;
-}
-
-form h3 {
+  }
+  
+  .login-texto {
     text-align: center;
     color: #fcf7a5;
     font-family: "Grenze Gotisch", cursive;
     margin-bottom: 30px;
     font-size: 55px;
-}
-
-form input[type=text],
-form input[type=password] {
+  }
+  
+  .placeholders {
+    border: black solid 1px;
+    background-color: rgba(0, 0, 0, 0.473);
     width: 100%;
-    height: 70px;
+    height: 55px;
     padding-left: 10px;
     margin: 15px 0;
     border-radius: 50px;
     outline: none;
-}
-
-
-form input[type=submit] {
+    text-align: center;
+    font-size: 18px;
+    color: #fcf8a5;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #fcf8a58d;
+  }
+  
+  .botao-entrar {
     border: 1px solid #fcf7a5;
     width: 100%;
     height: 60px;
@@ -42,9 +49,9 @@ form input[type=submit] {
     color: #fcf7a5;
     outline: none;
     font-size: 30px;
-}
-
-form input[type=submit]:hover {
+  }
+  
+  .botao-entrar:hover {
     color: rgb(175, 150, 40);
     border: 1px solid rgb(175, 150, 40);
-}
+  }

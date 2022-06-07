@@ -30,7 +30,9 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
