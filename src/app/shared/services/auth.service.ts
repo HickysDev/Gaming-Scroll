@@ -36,10 +36,11 @@ export class AuthService {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
         this.SetUserData(result.user);
+        this.ngZone.run(() => {
+          this.router.navigate(['']);
+        });
+        console.log(this.isLoggedIn);
       })
       .catch((error) => {
         window.alert(error.message);
@@ -50,6 +51,7 @@ export class AuthService {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
+        this.router.navigate(['']);
         this.SetUserData(result.user);
       })
       .catch((error) => {
@@ -78,7 +80,7 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
+    return user !== null ? true : false;
   }
   // Sign in with Google
   GoogleAuth() {
@@ -123,7 +125,8 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['/login']);
+      console.log(this.isLoggedIn);
     });
   }
 }

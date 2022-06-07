@@ -45,8 +45,20 @@
             />
           </div>
           <div>
-            <button routerLink="/registrar" class="botaoHome botaoCentral">
+            <button
+              *ngIf="!isSignedIn"
+              routerLink="/registrar"
+              class="botaoHome botaoCentral"
+            >
               <p class="grenze textoBotaoHome">Registrar-se</p>
+            </button>
+            <button
+              *ngIf="isSignedIn"
+              routerLink=""
+              class="botaoHome botaoCentral"
+              (click)="authService.SignOut()"
+            >
+              <p class="grenze textoBotaoHome">Lista</p>
             </button>
           </div>
         </div>
