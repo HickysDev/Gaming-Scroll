@@ -45,8 +45,17 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div [ngSwitch]="isSignedIn">
       <a
+        *ngSwitchCase="1"
+        class="navbar-brand justify-content-end"
+        style="margin-left: 15vh"
+        routerLink=""
+        (click)="authService.SignOut()"
+        ><span class="text-cor2 h3"> Logout </span></a
+      >
+      <a
+        *ngSwitchCase="0"
         class="navbar-brand justify-content-end"
         style="margin-left: 15vh"
         routerLink="/login"
