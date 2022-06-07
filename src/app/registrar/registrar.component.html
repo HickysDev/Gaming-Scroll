@@ -13,11 +13,13 @@
                 <h3 class="login-texto">Registre-se</h3>
                 <input class="placeholders" type="text" placeholder="Nome de Usuário" />
                 <input class="placeholders" type="email" placeholder="E-mail" />
-                <input class="placeholders" type="password" placeholder="Senha" />
-                <input class="placeholders" type="password" placeholder="Confirmar a Senha" />
+                <input class="placeholders" type="text" id="1stPassword" placeholder="Senha" onkeyup=" Validate()" />
+                <input class="placeholders" type="text" id="ConfirmPassword" placeholder="Confirmar a Senha"
+                    onkeyup=" Validate()" />
                 <button class="botao-entrar">
                     Registrar
                 </button>
+                <span id="message"></span>
             </div>
             <!-- componente pra testar login, tem um botão de logout nele -->
         </div>

@@ -10,6 +10,6 @@ export class RegistrarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  };
 
 }
