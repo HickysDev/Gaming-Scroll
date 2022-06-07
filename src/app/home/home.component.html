@@ -44,22 +44,23 @@
               src="../../assets/img/pergaminho3.png"
             />
           </div>
-          <div>
+          <div [ngSwitch]="isSignedIn">
             <button
-              *ngIf="!isSignedIn"
-              routerLink="/registrar"
-              class="botaoHome botaoCentral"
-            >
-              <p class="grenze textoBotaoHome">Registrar-se</p>
-            </button>
-            <button
-              *ngIf="isSignedIn"
+              *ngSwitchCase="1"
               routerLink=""
               class="botaoHome botaoCentral"
               (click)="authService.SignOut()"
             >
               <p class="grenze textoBotaoHome">Lista</p>
             </button>
+            <button
+              *ngSwitchCase="0"
+              routerLink="/registrar"
+              class="botaoHome botaoCentral"
+            >
+              <p class="grenze textoBotaoHome">Registrar-se</p>
+            </button>
+            -->
           </div>
         </div>
       </main>

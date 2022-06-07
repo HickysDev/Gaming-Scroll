@@ -9,11 +9,15 @@ import { AuthService } from '../shared/services/auth.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  isSignedIn = false;
+  isSignedIn = 0;
+
   constructor(public authService: AuthService) {}
 
   ngOnInit(): void {
-    if (this.authService.isLoggedIn !== false) this.isSignedIn = true;
-    else this.isSignedIn = false;
+    if (this.authService.isLoggedIn) {
+      this.isSignedIn = 1;
+    } else {
+      this.isSignedIn = 0;
+    }
   }
 }
