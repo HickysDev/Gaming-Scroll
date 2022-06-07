@@ -20,6 +20,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AuthService } from './shared/services/auth.service';
+import { EditComponent } from './jogos/edit/edit.component';
+import { ListComponent } from './jogos/list/list.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { AuthService } from './shared/services/auth.service';
     SuporteComponent,
     SignInComponent,
     SignUpComponent,
+    EditComponent,
+    ListComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

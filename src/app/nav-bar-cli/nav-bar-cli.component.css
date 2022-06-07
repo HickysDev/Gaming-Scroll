@@ -1,176 +1,72 @@
+.nav-link {
+  padding: 0px;
+}
+
 /* fonte */
-
-a {
-    color: inherit;
-    /* blue colors for links too */
-    text-decoration: inherit;
-    /* no underline */
-}
-
 .grenze {
-    font-family: "Grenze Gotisch", cursive;
-    font-size: x-large;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: x-large;
 }
-
-/* background */
-.bg-inteiro {
-    background-size: cover;
-    min-height: 100vh;
-    height: 100vh;
-    position: relative;
-    background-position: center;
-    display: block;
-    width: 100vw;
-}
-
-a
 
 /* Hover do texto */
 .text-cor {
-    text-decoration: dashed;
-    color: #fcf7a5;
+  text-decoration: dashed;
+  color: #fcf7a5;
 }
 
-ul li .text-cor:hover {
-    color: rgb(175, 150, 40);
-}
-
-a .text-cor2 {
-    text-decoration: dashed;
-    color: rgb(255, 230, 140);
-}
-
-a .text-cor2:hover {
-    color: rgb(175, 150, 40);
-}
-
-/* Centro do site */
-
-.siteCentral {
-    border: 1px solid black;
-}
-
-.parteCentral {
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.siteCentral2 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mt-7 {
-    padding-top: 15vh;
-}
-
-.pb-6 {
-    padding-bottom: 6vh;
-}
-
-.endContainer {
-    height: 6vh;
-    width: 100vw;
-}
-
-.bolc {
-    outline-offset: 10px;
-}
-
-/* Logo e Centro do Site 
-( da pra fazer tudo aqui só que vai ter que usar FlexBox ) 
-( adiciona a classe flex em tudo no html que for no centro ) */
-
-.flex {
-    display: flex;
-}
-
-.logo-nome {
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    width: 800px;
-    height: 500px;
-}
-
-.centerImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.pergaminho {
-    width: 350px;
-}
-
-.container1 {
-    padding: 30px;
-    margin: 0 auto;
-    border: black 1px solid;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.search-box {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
+/* .search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
 }
 
 .input-search {
-    height: 50px;
-    width: 50px;
-    border-style: none;
-    padding: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 25px;
-    transition: all .5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0);
-    padding-right: 40px;
-    color: #fff;
-
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  padding-right: 40px;
+  color: #fff;
 }
 
 .input-search::placeholder {
-    color: rgb(255, 230, 140);
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 100;
-
+  color: rgb(255, 230, 140);
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 
 .btn-search {
-    width: 50px;
-    height: 50px;
-    border-style: none;
-    font-size: 20px;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    color: #ffffff;
-    background-color: transparent;
-    pointer-events: painted;
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
 }
 
-.btn-search:focus~.input-search {
-    width: 300px;
-    border: solid rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 230, 140, 0.2);
-    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+.btn-search:focus ~ .input-search {
+  width: 300px;
+  border: solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 230, 140, 0.2);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
 .input-search:focus {
-    width: 300px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 230, 140, 0.2);
-    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
+  width: 300px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 230, 140, 0.2);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+} */
