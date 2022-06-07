@@ -55,3 +55,8 @@
     color: rgb(175, 150, 40);
     border: 1px solid rgb(175, 150, 40);
 }
+
+.validationPwd {
+    text-align: center;
+    display: block;
+}

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ignoreElements } from 'rxjs';
 import { routes } from '../app.routing';
 import { AuthService } from '../shared/services/auth.service';
+import { AppComponent } from '../app.component';
+
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,8 @@ import { AuthService } from '../shared/services/auth.service';
 export class HomeComponent implements OnInit {
   isSignedIn = 0;
 
-  constructor(public authService: AuthService) {}
+
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
     if (this.authService.isLoggedIn) {
@@ -19,5 +22,5 @@ export class HomeComponent implements OnInit {
     } else {
       this.isSignedIn = 0;
     }
-  }
+  };
 }
