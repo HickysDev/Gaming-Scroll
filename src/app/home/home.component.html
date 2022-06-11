@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <meta content="text/css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles.css" />
 
   <title>Tela de login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,14 +36,10 @@
         <div class="flex">
           <img class="pergaminho logoCentral" src="../../assets/img/pergaminho3.png" />
         </div>
-        <div [ngSwitch]="isSignedIn">
-          <button *ngSwitchCase="1" routerLink="" class="botaoHome botaoCentral" (click)="authService.SignOut()">
-            <p class="grenze textoBotaoHome">Lista</p>
-          </button>
-          <button *ngSwitchCase="0" routerLink="/registrar" class="botaoHome botaoCentral">
+        <div>
+          <button routerLink="/registrar" class="botaoHome botaoCentral">
             <p class="grenze textoBotaoHome">Registrar-se</p>
           </button>
-          -->
         </div>
       </div>
     </main>

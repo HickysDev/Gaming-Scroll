@@ -1,0 +1,136 @@
+.caixa-perfil {
+  background-color: #000000b2;
+  width: 50vw;
+  height: 200px;
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.caixa-lista {
+  display: block;
+  background-color: #000000b2;
+  width: 50vw;
+  height: 480px;
+  padding: 75px;
+  position: absolute;
+  left: 50%;
+  top: 63%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.nick {
+  color: white;
+  font-size: 30px;
+}
+
+.inteiro {
+  color: rgb(136, 136, 136);
+  font-size: 15px;
+  text-align: center;
+}
+
+.nome {
+  margin-top: 10px;
+  margin-left: 260px;
+  text-align: center;
+}
+
+.linha-perfil {
+  border-left: 2px solid white;
+  height: 150px;
+  position: absolute;
+  bottom: 12%;
+  left: 33%;
+}
+
+.avatar {
+  width: 160px;
+  position: absolute;
+  bottom: 19px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #fcf7a5;
+  font-family: "Grenze Gotisch", cursive;
+  position: fixed;
+  left: 50%;
+  top: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.linha-lista {
+  border-left: 2px solid white;
+  height: 100%;
+  left: 28%;
+  top: 15%;
+  margin-left: 1vw;
+}
+
+.jogo {
+  width: 28%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.caixa-jogo {
+  display: flex;
+  background-color: #0000009e;
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.caixa-jogo:hover {
+  background-color: #000000c3;
+}
+
+.titulo-jogo {
+  position: absolute;
+  color: white;
+  padding-left: 35%;
+  margin-top: 7%;
+  font-size: 20px;
+}
+
+.nota {
+  position: absolute;
+  width: 40px;
+  margin-left: 88%;
+  text-align: center;
+  align-self: center;
+  border-color: black;
+}
+
+.nota-texto {
+  position: absolute;
+  color: white;
+  padding-left: 82%;
+  margin-top: 7%;
+}
+
+/* hide scrollbar but allow scrolling */
+/* hide scrollbar but allow scrolling */
+
+.testeColor {
+  background-color: white;
+}
+
+.btnedit {
+  margin-left: 40vw;
+}
+
+::placeholder {
+  color: black;
+}

@@ -1,0 +1,33 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+    <div class="bg-inteiro" style="
+      background-image: url(../assets/img/akfqd7mvcss51.jpg);
+      background-repeat: no-repeat;">
+
+        <app-nav-bar-cli></app-nav-bar-cli>
+
+        <div>
+            <form [formGroup]=loginForm (ngSubmit)="submit()">
+                <div class="caixa-lista borderToda">
+                    <h3 class="login-texto">Acessar Conta</h3>
+
+                    <input class=" placeholders" placeholder="Email address" formControlName="email" />
+                    <span *ngIf="email?.errors?.['email']">Email inválido</span>
+
+                    <input class=" placeholders" type="password" placeholder="Password" formControlName="password" />
+                    <span *ngIf="password?.errors?.['required']">Senha necessária</span>
+
+                    <button class="botao-entrar" type="submit">Entrar</button>
+
+                    <button routerLink="/registrar" class="botao-entrar" type="submit">Registrar-se</button>
+
+                </div>
+            </form>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+</body>

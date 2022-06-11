@@ -7,6 +7,17 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { userInfo } from 'os';
+import {
+  Auth,
+  signInWithEmailAndPassword,
+  authState,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  UserInfo,
+  UserCredential,
+} from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,13 +25,17 @@ export class AuthService {
   service() {
     throw new Error('Method not implemented.');
   }
+
   userData: any; // Save logged in user data
+
   constructor(
+    public db: AngularFireDatabase,
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
     public ngZone: NgZone // NgZone service to remove outside scope warning
   ) {}
+
   // Sign in with email/password
   SignIn(email: string, password: string) {
     return this.afAuth
@@ -30,7 +45,7 @@ export class AuthService {
         this.ngZone.run(() => {
           this.router.navigate(['']);
         });
-        console.log(this.isLoggedIn);
+        console.log(result.user);
       })
       .catch((error) => {
         window.alert(error.message);
@@ -43,6 +58,7 @@ export class AuthService {
       .then((result) => {
         this.router.navigate(['']);
         this.SetUserData(result.user);
+        console.log(result.user);
       })
       .catch((error) => {
         window.alert(error.message);
@@ -71,14 +87,6 @@ export class AuthService {
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
     return user !== null ? true : false;
-  }
-  // Sign in with Google
-  GoogleAuth() {
-    return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      if (res) {
-        this.router.navigate(['dashboard']);
-      }
-    });
   }
   // Auth logic to run auth providers
   AuthLogin(provider: any) {
@@ -116,8 +124,11 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['/login']);
+      this.router.navigate(['/perfil']);
       console.log(this.isLoggedIn);
     });
   }
 }
+//henrique rei delas
+//Rafael mae delas
+//picas

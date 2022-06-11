@@ -1,1 +1,101 @@
-<p>perfil works!</p>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+  <div class="bg-inteiro" style="
+      background-image: url(../assets/img/teste1.png);
+      background-repeat: no-repeat;
+      height: 100vh;">
+    <app-nav-bar-cli class="fixed-top"></app-nav-bar-cli>
+    <main>
+      <!--  Perfil  -->
+
+      <div class="caixa-perfil">
+        <img class="avatar" src="../../assets/img/joker.jpg" alt="Imagem perfil">
+
+        <div>
+          <span class="linha-perfil"></span>
+          <button routerLink="/edit-perfil" class="btnedit"> <img src="s rc/assets/img/lupa.png"></button>
+        </div>
+        <ng-container *ngIf="user$ | async as user">
+          <span class="nick nome">{{user.displayName}}</span>
+          <p class="inteiro">{{user.firstName}} {{user.lastName}}</p>
+        </ng-container>
+      </div>
+
+
+      <div class="caixa-lista">
+        <div>
+          <h1> Sua Lista:</h1>
+
+          <!--Navbar lista de jogos-->
+          <div class="testeColor">
+            <ng-form action="" *ngIf="user$ | async as user">
+              <select name="" id="">
+                <option value="" selected>Selecione o jogo</option>
+                <option>{{user.firstName}} </option>
+              </select>
+              <button type="submit">Adicionar</button>
+            </ng-form>
+          </div>
+        </div>
+
+
+        <!--JOGOS -->
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> <!-- coloquei laranja pra falar que ele ta jogando-->
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div>
+          <input type="text" placeholder="Coloque o nome do jogo">
+        </div>
+        <div>
+          <input type="number" placeholder="Adicione uma nota ao jogo">
+        </div>
+        <div>
+          <button>Adicionar jogo</button>
+        </div>
+
+        <!-- <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span>
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div> -->
+
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+</body>

@@ -6,7 +6,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50px;
+  border-radius: 20px;
   border: solid black 2px;
 }
 
