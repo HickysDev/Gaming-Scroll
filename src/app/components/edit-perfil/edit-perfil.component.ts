@@ -18,10 +18,11 @@ export class EditPerfilComponent implements OnInit {
 
   profileForm = new FormGroup({
     uid: new FormControl(''),
-    displayName: new FormControl('', Validators.required),
+    displayName: new FormControl(''),
     firstName: new FormControl(''),
     lastName: new FormControl(''),
   });
+  router: any;
 
   constructor(
     private imageUploadService: ImageUploadService,
@@ -39,7 +40,7 @@ export class EditPerfilComponent implements OnInit {
 
   uploadFile(event: any, { uid }: User) {
     this.imageUploadService
-      this.imageUploadService.uploadImage(event.target.files[0], `images/profile/${uid}`)
+      .uploadImage(event.target.files[0], `images/profile/${uid}`)
       .pipe(
         this.toast.observe({
           loading: 'Enviando a imagem...',
@@ -68,5 +69,6 @@ export class EditPerfilComponent implements OnInit {
         })
       )
       .subscribe();
+    this.router.navigate(['/perfil']);
   }
 }

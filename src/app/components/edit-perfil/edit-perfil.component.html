@@ -1,42 +1,65 @@
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
 </style>
-
 <body>
-    <div class="bg-inteiro" style="
+  <div
+    class="bg-inteiro"
+    style="
       background-image: url(../assets/img/akfqd7mvcss51.jpg);
       background-repeat: no-repeat;
-      ">
-        <div class="form-container text-center" *ngIf="user$ | async as user">
+    "
+  >
+    <div class="form-container text-center" *ngIf="user$ | async as user">
+      <app-nav-bar-cli class="fixed-top"></app-nav-bar-cli>
 
+      <div class="caixa borderToda" action="#">
+        <h3 class="login-texto" style="font-size: 45px">Editar perfil</h3>
 
-            <app-nav-bar-cli class="fixed-top"></app-nav-bar-cli>
+        <img
+          class="imagem-perfil"
+          [src]="user.photoURL ?? '../../assets/img/placeholder.png'"
+        />
 
-            <div class="caixa borderToda" action="#">
-
-                <h3 class="login-texto" style="font-size:45px">Editar perfil</h3>
-
-                <img class="imagem-perfil" [src]="user.photoURL ?? '../../assets/img/placeholder.png'">
-
-                <div>
-                    <button class="envioBTN" (click)="inputField.click()">Enviar Imagem</button>
-                    <input #inputField class="envioBTN" type="file" hidden (change)="uploadFile($event, user)">
-                </div>
-
-                <form [formGroup]=profileForm (ngSubmit)="saveProfile()">
-
-                    <input type="text" minlength="2" class=" placeholders" placeholder="Nome de exibição"
-                        formControlName="displayName" />
-
-                    <input type="text" class=" placeholders" placeholder="Nome" formControlName="firstName" />
-
-                    <input type="text" class=" placeholders" placeholder="Sobrenome" formControlName="lastName" />
-
-                    <button class="botao-entrar" type="submit">Salvar</button>
-
-                </form>
-            </div>
+        <div>
+          <button class="envioBTN" (click)="inputField.click()">
+            Enviar Imagem
+          </button>
+          <input
+            #inputField
+            class="envioBTN"
+            type="file"
+            hidden
+            (change)="uploadFile($event, user)"
+          />
         </div>
-        <app-footer></app-footer>
+
+        <form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+          <input
+            type="text"
+            minlength="2"
+            class="placeholders"
+            placeholder="Nome de exibição"
+            formControlName="displayName"
+          />
+
+          <input
+            type="text"
+            class="placeholders"
+            placeholder="Nome"
+            formControlName="firstName"
+          />
+
+          <input
+            type="text"
+            class="placeholders"
+            placeholder="Sobrenome"
+            formControlName="lastName"
+          />
+
+          <button class="botao-entrar" type="submit">Salvar</button>
+        </form>
+      </div>
     </div>
+    <app-footer></app-footer>
+  </div>
 </body>

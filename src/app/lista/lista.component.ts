@@ -1,32 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-import { addDoc, Firestore, collection } from 'firebase/firestore';
+import { FormControl, FormGroup } from '@angular/forms';
+import { switchMap } from 'rxjs';
 import { ListaService } from '../services/lista.service';
-import Jogo from '../models/jogo';
-
-
+import { UsersService } from '../services/users.service';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.css']
+  styleUrls: ['./lista.component.css'],
 })
 export class ListaComponent implements OnInit {
-
-jogos: Jogo[];
+  formulario: FormGroup;
 
   constructor(private listaService: ListaService) {
-    this.jogos = [{
-      nome: '',
-      nota: '',
-      imagem: ''
-    }];
+    this.formulario = new FormGroup({
+      nome: new FormControl(),
+      nota: new FormControl(),
+      imagem: new FormControl(),
+    });
   }
 
+  ngOnInit(): void {}
 
-
-  ngOnInit(): void {
-    this.listaService.getJogos().subscribe(jogos =>{
-      this.jogos = jogos
-    })
+  async onSubmit() {
+    console.log(this.formulario.value);
+    const response = await this.listaService.addJogo(this.formulario.value);
+    alert('Jogo adicionado com sucesso!');
+    console.log(response);
+    this.formulario.reset();
   }
 
+  uploadFile(event: any, { id }: Jogo) {
+    this.imageUploadService
+      .uploadImage(event.target.files[0], `images/games/${uid}`)
+      .pipe(
+        this.toast.observe({
+          loading: 'Enviando a imagem...',
+          success: 'Imagem enviada com sucesso.',
+          error: 'Ocorreu um erro ao enviar a imagem...',
+        }),
+        switchMap((imagem) =>
+          this.usersService.updateImage({
+            imagem,
+          })
+        )
+      )
+      .subscribe();
+  }
 }

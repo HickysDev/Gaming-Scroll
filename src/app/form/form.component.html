@@ -1,30 +1,45 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
 </style>
+<div
+  class="bg-inteiro"
+  style="
+    background-image: url(../assets/img/teste1.png);
+    background-repeat: no-repeat;
+  "
+>
+  <app-nav-bar-cli></app-nav-bar-cli>
 
-<body>
-  <div class="bg-inteiro" style="
-    background-image: url(../assets/img/akfqd7mvcss51.jpg);
-    background-repeat: no-repeat;">
+  <div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="caixa borderToda" action="#">
+        <h3 class="login-texto">Adicionar um Jogo a sua lista</h3>
 
-      <app-nav-bar-cli></app-nav-bar-cli>
+        <input
+          class="placeholders"
+          placeholder="Nome do jogo"
+          formControlName="nome"
+        />
+        <div class="placeholders flex items-center justify-center">
+          <p>Dê sua nota para o jogo:</p>
+          <select name="notas" id="nota" formControlName="nota">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
 
-      <div>
-          <form [formGroup]=formulario (ngSubmit)="onSubmit()">
-              <div class="caixa borderToda" action="#">
-                  <h3 class="login-texto">Jogos</h3>
-
-                  <input class=" placeholders" placeholder="Nome" formControlName="nome" />
-
-                  <input class=" placeholders" placeholder="Nota" formControlName="nota" />
-
-                  <input class=" placeholders" placeholder="Imagem" formControlName="imagem" />
-
-                  <button class="botao-entrar" type="submit">Enviar</button>
-              </div>
-          </form>
+        <button class="botao-entrar" type="submit">Adicionar</button>
       </div>
-
-      <app-footer></app-footer>
+    </form>
   </div>
-</body>
+
+  <app-footer></app-footer>
+</div>

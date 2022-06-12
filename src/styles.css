@@ -1,5 +1,53 @@
 /* background */
 
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-between {
+  align-content: space-between;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-top {
+  align-self: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .bg-inteiro {
   background-size: cover;
   min-height: 100vh;
@@ -9,24 +57,12 @@
   display: block;
   width: 100vw;
 }
+
 .caixa {
   background-color: #000000b2;
   max-width: 400px;
   width: 70%;
   height: 80%;
-  padding: 50px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-}
-
-.caixa-lista {
-  background-color: #000000b2;
-  max-width: 30%;
-  width: 40%;
-  height: 60%;
   padding: 50px;
   position: absolute;
   left: 50%;

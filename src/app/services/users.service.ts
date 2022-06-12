@@ -10,6 +10,7 @@ import {
 } from '@angular/fire/firestore';
 import { from, Observable, of, switchMap } from 'rxjs';
 import { User } from '../models/user';
+import Jogo from '../models/jogo';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -39,5 +40,10 @@ export class UsersService {
   updateUser(user: User): Observable<void> {
     const ref = doc(this.firestore, 'users', user.uid);
     return from(updateDoc(ref, { ...user }));
+  }
+
+  updateImage(jogo: Jogo): Observable<void> {
+    const ref = doc(this.firestore, 'Jogos', jogo.id);
+    return from(updateDoc(ref, { ...jogo }));
   }
 }
