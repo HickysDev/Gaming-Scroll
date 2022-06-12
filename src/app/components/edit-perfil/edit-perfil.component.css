@@ -28,7 +28,7 @@ footer {
   border-radius: 10px;
 }
 
-label {
+.envioBTN {
   display: block;
   background-color: rgba(2, 1, 0, 0.4);
   color: white;

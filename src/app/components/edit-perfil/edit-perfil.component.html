@@ -19,8 +19,8 @@
                 <img class="imagem-perfil" [src]="user.photoURL ?? '../../assets/img/placeholder.png'">
 
                 <div>
-                    <input type="file" id="upload" class="botaoPerfil" accept="image/*" hidden />
-                    <label for="upload">Escolher imagem</label>
+                    <button class="envioBTN" (click)="inputField.click()">Enviar Imagem</button>
+                    <input #inputField class="envioBTN" type="file" hidden (change)="uploadFile($event, user)">
                 </div>
 
                 <form [formGroup]=profileForm (ngSubmit)="saveProfile()">

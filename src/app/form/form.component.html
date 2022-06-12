@@ -1,0 +1,30 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+  <div class="bg-inteiro" style="
+    background-image: url(../assets/img/akfqd7mvcss51.jpg);
+    background-repeat: no-repeat;">
+
+      <app-nav-bar-cli></app-nav-bar-cli>
+
+      <div>
+          <form [formGroup]=formulario (ngSubmit)="onSubmit()">
+              <div class="caixa borderToda" action="#">
+                  <h3 class="login-texto">Jogos</h3>
+
+                  <input class=" placeholders" placeholder="Nome" formControlName="nome" />
+
+                  <input class=" placeholders" placeholder="Nota" formControlName="nota" />
+
+                  <input class=" placeholders" placeholder="Imagem" formControlName="imagem" />
+
+                  <button class="botao-entrar" type="submit">Enviar</button>
+              </div>
+          </form>
+      </div>
+
+      <app-footer></app-footer>
+  </div>
+</body>

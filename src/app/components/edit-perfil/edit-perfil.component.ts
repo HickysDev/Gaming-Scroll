@@ -39,12 +39,12 @@ export class EditPerfilComponent implements OnInit {
 
   uploadFile(event: any, { uid }: User) {
     this.imageUploadService
-      .uploadImage(event.target.files[0], `images/profile/${uid}`)
+      this.imageUploadService.uploadImage(event.target.files[0], `images/profile/${uid}`)
       .pipe(
         this.toast.observe({
-          loading: 'Uploading profile image...',
-          success: 'Image uploaded successfully',
-          error: 'There was an error in uploading the image',
+          loading: 'Enviando a imagem...',
+          success: 'Imagem enviada com sucesso.',
+          error: 'Ocorreu um erro ao enviar a imagem...',
         }),
         switchMap((photoURL) =>
           this.usersService.updateUser({
@@ -64,7 +64,7 @@ export class EditPerfilComponent implements OnInit {
         this.toast.observe({
           loading: 'Salvando dados do perfil...',
           success: 'Perfil atualizado com sucesso',
-          error: 'Occoreu um erro ao atualizar o perfil',
+          error: 'Ocorreu um erro ao atualizar o perfil',
         })
       )
       .subscribe();

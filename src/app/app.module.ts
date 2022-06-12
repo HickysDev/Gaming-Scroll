@@ -28,7 +28,9 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
-import { ScrollComponent } from './components/scroll/scroll.component';
+import { ListaComponent } from './lista/lista.component';
+import { FormComponent } from './form/form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { ScrollComponent } from './components/scroll/scroll.component';
     PerfilComponent,
     LoginComponent,
     EditPerfilComponent,
-    ScrollComponent,
+    ListaComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

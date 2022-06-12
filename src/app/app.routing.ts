@@ -6,6 +6,8 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
+import { ListaComponent } from './lista/lista.component';
+import { FormComponent } from './form/form.component';
 
 export const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
@@ -15,4 +17,6 @@ export const routes: Routes = [
   { path: 'suporte', component: SuporteComponent },
   { path: 'entrar', component: LoginComponent },
   { path: 'edit-perfil', component: EditPerfilComponent },
+  { path: 'add-jogos', component: FormComponent },
+  { path: 'lista', component: ListaComponent },
 ];
