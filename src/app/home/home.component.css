@@ -35,15 +35,15 @@ a:focus {
   transform: translate(-50%, -50%);
   border-radius: 50px;
 
-  background-color: #00000000;
+  background-color: #8b3c04b0;
   border: 2px solid #8b3c04;
   color: #fef7a2;
 
   text-align: center;
 }
-
+ 
 .botaoHome:hover {
-  background-color: #8b3c04b0;
+  background-color: #00000000;
   border: 2px solid #fef7a2;
   transition: 300ms;
 }
@@ -70,7 +70,7 @@ a:focus {
 }
 
 .form {
-  background-color: #000000b2;
+  background-color: #00000000;
   max-width: 600px;
   width: 425px;
   max-height: 550px;

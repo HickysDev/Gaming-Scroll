@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../shared/services/auth.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-nav-bar-cli',
@@ -7,15 +9,19 @@ import { AuthService } from '../shared/services/auth.service';
   styleUrls: ['./nav-bar-cli.component.css'],
 })
 export class NavBarCliComponent implements OnInit {
-  isSignedIn = 0;
+  user$ = this.usersService.currentUserProfile$;
 
-  constructor(public authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    public usersService: UsersService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-    if (this.authService.isLoggedIn) {
-      this.isSignedIn = 1;
-    } else {
-      this.isSignedIn = 0;
-    }
+  ngOnInit(): void {}
+
+  logout() {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['/']);
+    });
   }
 }

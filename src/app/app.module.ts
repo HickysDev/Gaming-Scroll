@@ -9,19 +9,27 @@ import { FooterComponent } from './footer/footer.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { FirebaseService } from './services/firebase.service';
+import {
+  AngularFireDatabase,
+  AngularFireDatabaseModule,
+} from '@angular/fire/compat/database';
 import { SuporteComponent } from './suporte/suporte.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { AuthService } from './shared/services/auth.service';
-import { EditComponent } from './jogos/edit/edit.component';
-import { ListComponent } from './jogos/list/list.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { RegisterComponent } from './components/register/register.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { AuthService } from './services/auth.service';
+import { Auth, provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
+import { ListaComponent } from './lista/lista.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -31,23 +39,31 @@ import { PerfilComponent } from './perfil/perfil.component';
     FooterComponent,
     SobreComponent,
     SuporteComponent,
-    SignInComponent,
-    SignUpComponent,
-    EditComponent,
-    ListComponent,
+    RegisterComponent,
     PerfilComponent,
+    LoginComponent,
+    EditPerfilComponent,
+    ListaComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    HotToastModule.forRoot(),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [AuthService],
+
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

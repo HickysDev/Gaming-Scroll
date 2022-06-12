@@ -1,1 +1,98 @@
-<p>perfil works!</p>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+  <div class="bg-inteiro" style="
+      background-image: url(../assets/img/teste1.png);
+      background-repeat: no-repeat;
+      height: 100vh;">
+    <app-nav-bar-cli class="fixed-top"></app-nav-bar-cli>
+    <main>
+      <!--  Perfil  -->
+
+      <div class="caixa-perfil">
+        <ng-container *ngIf="user$ | async as user">
+          <img class="avatar" [src]="user.photoURL ?? '../../assets/img/placeholder.png'">]
+        </ng-container>
+
+        <div>
+          <span class="linha-perfil"></span>
+          <!-- Botões -->
+          <button routerLink="/edit-perfil"> <img class="btnedit" src="../../assets/img/editar.png" width="40px"
+            height="40px"></button>
+          <button > <img class="btnedit" src="../../assets/img/lixeira.png" width="40px"
+            height="40px"></button>
+          <button routerLink="/add-jogos"> <img class="btnedit" src="../../assets/img/adicionar.png" width="40px"
+            height="40px"></button>
+          <button routerLink="/edit-perfil"> <img class="btnedit" src="../../assets/img/engrenagem.png" width="40px"
+              height="40px"></button>
+        </div>
+        <!--------------------------->
+
+
+        <ng-container *ngIf="user$ | async as user">
+          <div class="flex">
+            <span class="nick nome">{{user.displayName}}</span>
+            <p class="inteiro">{{user.firstName}} {{user.lastName}}</p>
+          </div>
+        </ng-container>
+      </div>
+
+
+      <div class="caixa-lista">
+        <div>
+          <h1> Sua Lista:</h1>
+        </div>
+
+
+        <!--JOGOS -->
+        
+        <div class="jogos">
+          <div class="jogo" *ngFor="let jogo of jogos">
+            <div class="caixa-jogo">
+              <span class="linha-lista"></span> <!-- coloquei laranja pra falar que ele ta jogando-->
+              <span class="titulo-jogo ">{{jogo.nome}}</span>
+              <span class="nota-texto">Nota: {{jogo.nota}}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span> 
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div>
+
+        <div class="caixa-jogo">
+          <img class="jogo" src="../../assets/img/persona5.jpg" alt="Imagem perfil">
+          <span class="linha-lista"></span>
+          <span class="titulo-jogo ">Persona 5 Strikers</span>
+          <span class="nota-texto">Nota:</span>
+          <input type="number" class="nota" min="1" max="10">
+        </div> -->
+
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+</body>
