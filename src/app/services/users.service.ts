@@ -32,6 +32,19 @@ export class UsersService {
     );
   }
 
+  // get currentUserGame$(): Observable<User | null> {
+  //   return this.authService.currentUser$.pipe(
+  //     switchMap((jogo) => {
+  //       if (!jogo?.uid) {
+  //         return of(null);
+  //       }
+
+  //       const ref = doc(this.firestore, 'Jogo', jogo?.uid);
+  //       return docData(ref) as Observable<User>;
+  //     })
+  //   );
+  // }
+
   addUser(user: User): Observable<void> {
     const ref = doc(this.firestore, 'users', user.uid);
     return from(setDoc(ref, user));
@@ -42,8 +55,8 @@ export class UsersService {
     return from(updateDoc(ref, { ...user }));
   }
 
-  updateImage(jogo: Jogo): Observable<void> {
-    const ref = doc(this.firestore, 'Jogos', jogo.id);
-    return from(updateDoc(ref, { ...jogo }));
-  }
+  // updateImage(jogo: Jogo): Observable<void> {
+  //   const ref = doc(this.firestore, 'Jogos', jogo.id);
+  //   return from(updateDoc(ref, { ...jogo }));
+  // }
 }

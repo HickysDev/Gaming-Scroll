@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HotToastService } from '@ngneat/hot-toast';
 import { switchMap } from 'rxjs';
+import Jogo from '../models/jogo';
+import { ImageUploadService } from '../services/image-upload.service';
 import { ListaService } from '../services/lista.service';
 import { UsersService } from '../services/users.service';
+
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -11,7 +15,12 @@ import { UsersService } from '../services/users.service';
 export class ListaComponent implements OnInit {
   formulario: FormGroup;
 
-  constructor(private listaService: ListaService) {
+  constructor(
+    private userService: UsersService,
+    private listaService: ListaService,
+    private imageUploadService: ImageUploadService,
+    private toast: HotToastService
+  ) {
     this.formulario = new FormGroup({
       nome: new FormControl(),
       nota: new FormControl(),
@@ -29,21 +38,21 @@ export class ListaComponent implements OnInit {
     this.formulario.reset();
   }
 
-  uploadFile(event: any, { id }: Jogo) {
-    this.imageUploadService
-      .uploadImage(event.target.files[0], `images/games/${uid}`)
-      .pipe(
-        this.toast.observe({
-          loading: 'Enviando a imagem...',
-          success: 'Imagem enviada com sucesso.',
-          error: 'Ocorreu um erro ao enviar a imagem...',
-        }),
-        switchMap((imagem) =>
-          this.usersService.updateImage({
-            imagem,
-          })
-        )
-      )
-      .subscribe();
-  }
+  // uploadFile(event: any, { id }: Jogo) {
+  //   this.imageUploadService
+  //     .uploadImage(event.target.files[0], `images/games/${id}`)
+  //     .pipe(
+  //       this.toast.observe({
+  //         loading: 'Enviando a imagem...',
+  //         success: 'Imagem enviada com sucesso.',
+  //         error: 'Ocorreu um erro ao enviar a imagem...',
+  //       }),
+  //       switchMap((imagem) =>
+  //         this.usersService.updateImage({
+  //           imagem,
+  //         })
+  //       )
+  //     )
+  //     .subscribe();
+  // }
 }
