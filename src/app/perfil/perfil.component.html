@@ -1,1 +1,104 @@
-<p>perfil works!</p>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+  <div
+    class="bg-inteiro"
+    style="
+      background-image: url(../assets/img/teste1.png);
+      background-repeat: no-repeat;
+    "
+  >
+    <app-nav-bar-cli class="fixed-top"></app-nav-bar-cli>
+    <main>
+      <div class="container-conteudo-principal flex flex-col items-center">
+        <!--  Perfil  -->
+
+        <div class="caixa-perfil flex items-center">
+          <div class="container-avatar-perfil flex linha-direita">
+            <ng-container *ngIf="user$ | async as user">
+              <img
+                class="avatar"
+                [src]="user.photoURL ?? '../../assets/img/placeholder.png'"
+              />
+            </ng-container>
+          </div>
+          <!-- <div>
+            
+            
+            <button>
+              <img
+                class="btnedit"
+                src="../../assets/img/lixeira.png"
+                width="40px"
+                height="40px"
+              />
+            </button>
+            
+            <button routerLink="/edit-perfil">
+              <img
+                class="btnedit"
+                src="../../assets/img/engrenagem.png"
+                width="40px"
+                height="40px"
+              />
+            </button>
+          </div> -->
+          <div class="container-nome-perfil">
+            <ng-container *ngIf="user$ | async as user">
+              <div class="text-center">
+                <span class="nick">{{ user.displayName }}</span>
+                <p class="inteiro">{{ user.firstName }} {{ user.lastName }}</p>
+              </div>
+            </ng-container>
+          </div>
+          <div class="botao-editar-perfil flex flex-col justify-between">
+            <button routerLink="/edit-perfil">
+              <img
+                src="../../assets/img/engrenagem.png"
+                width="40px"
+                height="40px"
+              />
+            </button>
+            <button routerLink="/add-jogos">
+              <img
+                src="../../assets/img/adicionar.png"
+                width="40px"
+                height="40px"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="caixa-lista flex flex-col">
+          <div class="container-titulo-lista flex justify-content-center">
+            <h2 class="titulo-lista">Sua Lista</h2>
+          </div>
+
+          <!--JOGOS -->
+
+          <div class="flex flex-col items-center" *ngFor="let jogo of jogos">
+            <div class="caixa-jogo flex justify-between items-center">
+              <span class="titulo-jogo linha-direita">{{ jogo.nome }}</span>
+              <div
+                class="container-nota-lista flex items-center justify-between"
+              >
+                <span class="nota-texto">Nota: {{ jogo.nota }}</span>
+                <button (click)="onClickDelete(jogo)">
+                  <img
+                    src="../../assets/img/lixeira.png"
+                    width="40px"
+                    height="40px"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+</body>

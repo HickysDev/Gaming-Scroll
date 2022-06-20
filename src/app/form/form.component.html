@@ -1,0 +1,38 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+<div class="bg-inteiro" style="
+    background-image: url(../assets/img/teste1.png);
+    background-repeat: no-repeat;
+  ">
+  <app-nav-bar-cli></app-nav-bar-cli>
+
+  <div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="caixa borderToda" action="#">
+        <h3 class="login-texto">Adicionar um Jogo a sua lista</h3>
+
+        <input class="placeholders" placeholder="Nome do jogo" formControlName="nome" />
+        <div class="placeholders flex items-center justify-center">
+          <p>Dê sua nota para o jogo: </p>
+          <select name="notas" id="nota" formControlName="nota">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <button class="botao-entrar" type="submit">Adicionar</button>
+      </div>
+    </form>
+  </div>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,39 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap");
+</style>
+
+<body>
+    <div class="bg-inteiro" style="
+      background-image: url(../assets/img/akfqd7mvcss51.jpg);
+      background-repeat: no-repeat;">
+
+        <app-nav-bar-cli></app-nav-bar-cli>
+
+        <div>
+            <form [formGroup]=registerForm (ngSubmit)="submit()">
+                <div class="caixa borderToda" action="#">
+                    <h3 class="login-texto">Registre-se</h3>
+
+                    <input class=" placeholders" placeholder="Name" formControlName="name" />
+                    <span *ngIf="name?.errors?.['required']">Nome inválido</span>
+
+                    <input class=" placeholders" placeholder="Email address" formControlName="email" />
+                    <span *ngIf="email?.errors?.['required']">Email necessário</span>
+                    <span *ngIf="email?.errors?.['email']">Email inválido</span>
+
+                    <input class=" placeholders" type="password" placeholder="Password" formControlName="password" />
+                    <span *ngIf="password?.errors?.['required']">Senha necessária</span>
+
+                    <input class=" placeholders" type="password" placeholder="Confirm Password"
+                        formControlName="confirmPassword" />
+                    <span *ngIf="confirmPassword?.errors?.['required']">Confirmação de senha necessária</span>
+                    <span *ngIf="registerForm.errors?.['passwordDontMatch']">As senhas devem coincidir</span>
+
+                    <button class="botao-entrar" type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+</body>
