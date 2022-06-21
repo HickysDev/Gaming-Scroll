@@ -8,10 +8,10 @@ O objetivo do projeto é a realização de um perfil de usuário para a listagem
 
 ## Realizadores
 
-Gabriel Maireno
-Gabriel Ramalho Berti
-Guilherme Vaz Oliveira
-Henrique de Freitas Pereira
-Rafael Fortes
-Rodrigo Klein
+Gabriel Maireno,
+Gabriel Ramalho Berti,
+Guilherme Vaz Oliveira,
+Henrique de Freitas Pereira,
+Rafael Fortes,
+Rodrigo Klein,
 
